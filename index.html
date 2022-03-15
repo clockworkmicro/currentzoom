@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>currentzoom widget</title>
-	<script src="./currentzoom.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>currentzoom widget</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+
+<!--just include the widget like this and all leaflet instances in the 
+webpage will get a zoom information -->
+<script src="./currentzoom.js"></script>
 </head>
 <body>
-	test
+<style>body{margin:0;}</style>
+<div id="map" style="width:100vw;height:100vh;"></div>
+<script>
+window.onload = function()
+{
+	var map = L.map(document.getElementById("map")).setView([ 10, 20 ], 2);
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+}
+</script>
 </body>
 </html>
