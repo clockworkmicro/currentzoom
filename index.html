@@ -18,7 +18,8 @@ webpage will get a zoom information -->
 <script>
 window.onload = function()
 {
-	var map = L.map(document.getElementById("map")).setView([ 10, 20 ], 2);
+	var opts = {"zoomSnap":0.1, "zoomDelta": 0.1}
+	var map = L.map(document.getElementById("map"), opts).setView([ 10, 20 ], 2);
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 }
 </script>
