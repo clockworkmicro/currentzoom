@@ -1,1 +1,8 @@
 # currentzoom
+
+currentzoom.js is a simple widget to display current zoom level of your Leaflet map.
+
+In order to use this widget you can add below script tag to your html and all Leaflet instances on your page will have the zoom widget placed on top right of the map.
+
+    <script src="https://clockworkmicro.github.io/currentzoom/currentzoom.js"></script>
+
